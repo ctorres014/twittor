@@ -1,7 +1,13 @@
+var url = window.location.href;
+var swLocation = "/twittor/sw.js";
 // Verificamos si esta instalado el sw
 // sino lo instalamos al momento
 if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/sw.js');
+    if (url.includes('localhost')) {
+        navigator.serviceWorker.register('/sw.js');
+    }
+    navigator.serviceWorker.register(swLocation);
+
 }
 
 
