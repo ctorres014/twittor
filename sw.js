@@ -48,7 +48,7 @@ self.addEventListener('activate', e => {
             if (key !== STATIC_CACHE && key.includes('static')) {
                 return caches.delete(key);
             }
-            if (key !== DYNAMIC_CACHE && key.includes('dynamic')) {
+            if (key !== DINAMIC_CACHE && key.includes('dynamic')) {
                 return caches.delete(key);
             }
         });
